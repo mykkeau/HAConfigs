@@ -29,8 +29,8 @@ sensor:
 
 mqtt:
   broker: xxx.xxx.xxx.xxx #mqtt broker ip address
-  username: ha
-  password: ha
+  username: xxxxx #mqtt username
+  password: xxxxx #mdtt password
   discovery: true
   discovery_retain: true
   topic_prefix: /homeassistant
