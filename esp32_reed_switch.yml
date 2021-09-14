@@ -4,18 +4,18 @@ esphome:
   board: esp32dev
 
 wifi:
-  ssid: "Awesome" #wifi ssid
-  password: "I@mAwesome!" #wifi password
+  ssid: "xxxxx" #wifi ssid
+  password: "xxxxx" #wifi password
   fast_connect: true
 
   ap:
     ssid: "Window-Sensor Fallback Hotspot"
-    password: "bQBotU9a7F78" #fallback hotspot password
+    password: "xxxxx" #fallback hotspot password
 
 mqtt:
-  broker: 192.168.5.230 #mqtt broker ip address
-  username: ha #mqtt username
-  password: ha #mqtt password
+  broker: xxx.xxx.xxx.xxx #mqtt broker ip address
+  username: xxxxx #mqtt username
+  password: xxxxx #mqtt password
   discovery: true
   discovery_retain: true
 
@@ -24,7 +24,7 @@ captive_portal:
 logger:
 
 ota:
-  password: "63f78558f79caeac8f6fd347f20a7473" #ota password
+  password: "xxxxx" #ota password
 
 binary_sensor:
   - platform: status
