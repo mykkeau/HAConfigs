@@ -1,0 +1,44 @@
+esphome:
+  name: window-sensor
+  platform: ESP32
+  board: esp32dev
+
+wifi:
+  ssid: "Awesome" #wifi ssid
+  password: "I@mAwesome!" #wifi password
+  fast_connect: true
+
+  ap:
+    ssid: "Window-Sensor Fallback Hotspot"
+    password: "bQBotU9a7F78" #fallback hotspot password
+
+mqtt:
+  broker: 192.168.5.230 #mqtt broker ip address
+  username: ha #mqtt username
+  password: ha #mqtt password
+  discovery: true
+  discovery_retain: true
+
+captive_portal:
+
+logger:
+
+ota:
+  password: "63f78558f79caeac8f6fd347f20a7473" #ota password
+
+binary_sensor:
+  - platform: status
+    name: "Window Status"
+  - platform: gpio
+    pin:
+      number: 14
+      mode: INPUT_PULLDOWN
+      inverted: True
+    name: "door"
+    device_class: door
+
+deep_sleep:
+  run_duration: 5s
+  sleep_duration: 360min
+  wakeup_pin: 14
+  wakeup_pin_mode: INVERT_WAKEUP
