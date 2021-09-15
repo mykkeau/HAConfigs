@@ -34,8 +34,8 @@ binary_sensor:
       number: 14
       mode: INPUT_PULLDOWN
       inverted: True
-    name: "door"
-    device_class: door
+    name: "window"
+    device_class: window
 
 deep_sleep:
   run_duration: 5s
